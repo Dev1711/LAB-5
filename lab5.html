@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="lab5.css"/>
+</head>
+<body>
+  <div class="box-container">
+    <h1>Tip Calculator</h1>
+
+    <!-- Currency conversion note -->
+    <div class="conversion-info">
+      <p><strong>Currency conversion:</strong></p>
+      <p>$1 USD = €0.95 EUR for EUROS</p>
+      <p>$1 USD = ₹85 INR for Rupees</p>
+    </div>
+
+    <form id="form">
+      <label for="totbill">Bill Total ($):</label>
+      <input type="text" id="totbill" placeholder="Enter Amount"/>
+
+      <label for="slider">Tip (%):</label>
+      <input type="range" id="slider" min="0" max="100" value="15"/>
+      <div id="tipValue">15%</div>
+
+      <label for="percent">Tip Percentage:</label>
+      <input type="text" id="percent" disabled/>
+
+      <label for="amt">Tip Amount ($):</label>
+      <input type="text" id="amt" disabled/>
+
+      <label for="tottaxt">Total Bill with Tax (11%) ($):</label>
+      <input type="text" id="tottaxt" disabled/>
+
+      <label for="currency">Currency:</label>
+      <select id="currency">
+        <option value="">Select Currency</option>
+        <option value="USD">$ US Dollars</option>
+        <option value="EUR">€ Euros</option>
+        <option value="INR">₹ Rupees</option>
+      </select>
+
+      <label for="convertedTip">Converted Tip Amount:</label>
+      <input type="text" id="convertedTip" disabled />
+
+      <label for="convertedTotal">Converted Total Bill with Tip and Tax:</label>
+      <input type="text" id="convertedTotal" disabled />
+
+      <div id="error" class="error"></div>
+    </form>
+  </div>
+
+  <script src="lab5.js"></script>
+</body>
+</html>
